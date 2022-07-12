@@ -31,7 +31,7 @@
   margin-bottom: 50px;
   box-shadow:  3px 3px 3px rgb(41, 40, 40);
   transition: 1s;
-  background-color: rgb(26, 25, 25);
+  background-color: rgba(48, 47, 47, 0.952);
 }
 .aPost:hover{
   top: -10px;
@@ -42,7 +42,7 @@
   width: 80%;
   margin-left: 10%;
   padding-bottom: 70%;
-  border: solid 1px #fff;
+  border: solid 0.1px #fff;
   margin-bottom: 20px;
 }
 .postImg{
