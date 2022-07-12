@@ -41,8 +41,10 @@
   position: relative;
   width: 80%;
   margin-left: 10%;
+  margin-top: 10px;
   padding-bottom: 70%;
   margin-bottom: 20px;
+  border: none;
 }
 .postImg{
   position: absolute;
