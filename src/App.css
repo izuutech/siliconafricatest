@@ -1,38 +1,104 @@
 .App {
+  background-color: rgb(26, 25, 25);
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.postsBox{
+  box-sizing: border-box;
+  padding-top: 50px;
+  width: 95%;
+  margin-left: 2.5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.aPost{
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 32%;
+  margin-left: 1.3%;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  box-shadow:  3px 3px 3px rgb(41, 40, 40);
+  transition: 1s;
+  background-color: rgb(26, 25, 25);
+}
+.aPost:hover{
+  top: -10px;
+  background-color: rgba(26, 25, 25, 0.678);
+}
+.postImgBox{
+  position: relative;
+  width: 80%;
+  margin-left: 10%;
+  padding-bottom: 70%;
+  border: solid 1px #fff;
+  margin-bottom: 20px;
+}
+.postImg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.postTitle{
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.postBody{
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.postBtn{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgb(255, 0, 128);
+  transition: 1s;
+  color: #fff;
+  width: 60%;
+  margin-left: 20%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.postBtn:hover{
+  background-color: rgba(255, 0, 128, 0.74);
+
+}
+
+
+.noPost{
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+}
+
+
+@media screen and (max-width: 700px ) {
+  .postsBox{
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .aPost{
+    width: 80%;
+    margin-left: 10%;
   }
 }
