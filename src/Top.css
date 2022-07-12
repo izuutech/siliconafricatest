@@ -1,0 +1,28 @@
+.top{
+    width: 100%;
+    background-color: rgb(224, 220, 220);
+    color: orange;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 70px;
+}
+.topLeft{
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    padding: 0px 7%;;
+}
+.topRight{
+    box-sizing: border-box;
+    padding-right: 5px;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+}
+.aTopRight{
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}

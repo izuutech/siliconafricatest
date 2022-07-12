@@ -1,8 +1,8 @@
 .App {
-  background-color: rgb(41, 40, 40);
+  background-color: rgb(231, 229, 229);
   box-sizing: border-box;
   width: 100%;
-  min-height: 100vh;
+  min-height: 120vh;
   text-align: center;
 }
 
@@ -22,20 +22,38 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  text-align: left;
+  justify-content: flex-end;
   box-sizing: border-box;
   padding: 5px;
   width: 32%;
+  min-height: 250px;
   margin-left: 1.3%;
   color: #fff;
-  border-radius: 10px;
   margin-bottom: 50px;
-  box-shadow:  3px 3px 3px rgb(41, 40, 40);
+  border: solid 3px white;
   transition: 1s;
-  background-color: rgba(32, 32, 32, 0.952);
+  background-image: url("https://source.unsplash.com/random");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .aPost:hover{
   top: -10px;
   background-color: rgba(26, 25, 25, 0.678);
+}
+.postContent{
+  position: relative;
+  z-index: 7;
+}
+.postCover{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(20, 20, 20);
+  opacity: 0.4;
+  z-index: 1;
 }
 .postImgBox{
   position: relative;
@@ -66,20 +84,21 @@
 .postBtn{
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: rgb(255, 0, 128);
+  background-color: orange;
   transition: 1s;
   color: #fff;
-  width: 60%;
-  margin-left: 20%;
-  height: 50px;
+  width: 10%;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .postBtn:hover{
-  background-color: rgba(255, 0, 128, 0.74);
+  background-color: rgba(255, 196, 0, 0.74);
   /**/
 }
 

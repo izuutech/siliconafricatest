@@ -1,0 +1,42 @@
+.header{
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    padding-left: 7%;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: orange;
+    font-weight: 700;
+}
+
+.headerLeft{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: black;
+}
+.headerLogo{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.headerLogoImg{
+    width: 100%;
+    height: 100%;
+}
+.headerRight{
+    cursor: pointer;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.aheaderRight{
+    margin-left: 5px;
+    margin-right: 5px;
+}

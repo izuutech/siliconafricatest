@@ -9,7 +9,7 @@ export default function Posts() {
         .then((res) => res.json())
         .then((data) => {
             let thePosts =[]
-            for (let i = 0; i < 6; i++){
+            for (let i = 0; i < 3; i++){
                 thePosts.push(data[i])
             }
             setPosts(thePosts)
@@ -20,31 +20,35 @@ export default function Posts() {
     }, [])
     
     const deletePost = (i) => {
-        fetch(`https://jsonplaceholder.typicode.com/posts/{i}`, {
-            method: "DELETE"
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                let newPost=posts.filter(post => {
-                    return post.id !== i
-                })
-                setPosts(newPost)
-                
+        let yes=window.confirm("Are you sure you want to delete this post");
+
+        if (yes === true) {
+            fetch(`https://jsonplaceholder.typicode.com/posts/{i}`, {
+                method: "DELETE"
             })
-            .catch((err) => console.log(err))
+                .then((res) => res.json())
+                .then((data) => {
+                    let newPost = posts.filter(post => {
+                        return post.id !== i
+                    })
+                    setPosts(newPost)
+                
+                })
+                .catch((err) => console.log(err))
+        }
 
     }
     return (
         <div className="postsBox" >
             {(posts[0])&&(
                     posts.map(post=>(
-                <div className="aPost" key={post.id}>
-                    <div className="postImgBox">
-                        <img src="https://source.unsplash.com/random" className="postImg" alt="Post Image" />
-                    </div>
-                    <div className="postTitle">{post.title}</div>
-                    <div className="postBody">{post.body}</div>
-                    <button className="postBtn" onClick={()=>deletePost(post.id)}> DELETE </button>
+                        <div className="aPost" key={post.id}>
+                            <div className='postContent'>
+                            <div className="postTitle">{post.title}</div>
+                            
+                                <div className="postBtn" onClick={() => deletePost(post.id)}> D </div>
+                            </div>
+                            <div className='postCover'></div>
                         </div>
                         ))
             )}
